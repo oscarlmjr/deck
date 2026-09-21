@@ -12,8 +12,12 @@ from .serializers import PostSerializer
 
 @api_view(['GET'])
 def post_list(request):
-    posts = Post.objects.all() # Change later to feed
+    user_ids = [request.user.id]
 
+    for user in request.user.friends.all():
+        user_ids.append(user.id)
+
+    posts = Post.objects.filter(created_by_id__in=list(user_ids))
     serializer = PostSerializer(posts, many=True)
 
     return JsonResponse(serializer.data, safe=False)
@@ -24,7 +28,7 @@ def post_list_profile(request, id):
     user = User.objects.get(pk=id)
     posts = Post.objects.filter(created_by_id=id)
 
-    serializer = PostSerializer(posts, many=True)
+    # serializer = PostSerializer(posts, many=True)
 
     posts_serializer = PostSerializer(posts, many=True)
     user_serializer = UserSerializer(user)

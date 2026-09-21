@@ -3,7 +3,7 @@
         <div class="main-center col-span-3 space-y-4">
             <div class="bg-white border border-gray-200 rounded-lg">
                 <form v-on:submit.prevent="submitForm" method="post">
-                    <div class="p-4">
+                    <div class="p-4">  
                         <textarea v-model="body" class="p-4 w-full bg-gray-100 rounded-lg" placeholder="What are you thinking about?"></textarea>
                     </div>
 
@@ -16,9 +16,9 @@
             </div>
 
             <div 
-            class="p-4 bg-white border border-gray-200 rounded-lg"
-            v-for="post in posts"
-            v-bind:key="post.id"
+                class="p-4 bg-white border border-gray-200 rounded-lg"
+                v-for="post in posts"
+                v-bind:key="post.id"
             >
                 <FeedItem v-bind:post="post" />
             </div>

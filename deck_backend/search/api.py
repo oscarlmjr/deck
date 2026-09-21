@@ -13,10 +13,8 @@ def search(request):
     data = request.data
     query = data['query']
 
-
     users = User.objects.filter(name__icontains=query)
     users_serializer = UserSerializer(users, many=True)
-
 
     posts = Post.objects.filter(body__icontains=query)
     posts_serializer = PostSerializer(posts, many=True)
