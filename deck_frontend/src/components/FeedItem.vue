@@ -44,7 +44,7 @@
 
 <script>
 import axios from 'axios'
-// import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 export default {
     props: {
@@ -64,6 +64,6 @@ export default {
             });
         }
     },
-    // components: { RouterLink }
+    components: { RouterLink }
 }
 </script>
