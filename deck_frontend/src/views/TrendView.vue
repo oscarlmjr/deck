@@ -6,7 +6,7 @@
             >
                 <h2 class="text-xl">Trend: #{{ $route.params.id }}</h2>
             </div>
-
+            
             <div 
                 class="p-4 bg-white border border-gray-200 rounded-lg"
                 v-for="post in posts"
