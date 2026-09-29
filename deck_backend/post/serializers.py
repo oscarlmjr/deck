@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from account.serializers import UserSerializer
 
-from .models import Post,  PostAttachment, Comment, Trend
+from .models import Post, PostAttachment, Comment, Trend
 
 
 class PostAttachmentSerializer(serializers.ModelSerializer):
@@ -17,7 +17,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'body', 'likes_count', 'comments_count', 'created_by', 'created_at_formatted',  'attachments')
+        fields = ('id', 'body', 'likes_count', 'comments_count', 'created_by', 'created_at_formatted', 'attachments')
 
 
 class CommentSerializer(serializers.ModelSerializer):

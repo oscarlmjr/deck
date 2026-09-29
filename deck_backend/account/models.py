@@ -58,6 +58,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         else:
             return 'https://picsum.photos/200/200'
 
+
 class FriendshipRequest(models.Model):
     SENT = 'sent'
     ACCEPTED = 'accepted'
