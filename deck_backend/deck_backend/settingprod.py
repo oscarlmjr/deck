@@ -14,9 +14,9 @@ SECRET_KEY = 'django-insecure-qvp-2nd5frc8=_2zd2yv^xsxryyzx7%0*1uwmv51+^-x6&a1*%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['api.wey.com']
 
-WEBSITE_URL = 'http://127.0.0.1:8000'
+WEBSITE_URL = 'http://api.wey.com'
 
 # Application definition
 
@@ -40,13 +40,11 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "http://wey.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "http://wey.com",
 ]
 
 INSTALLED_APPS = [
