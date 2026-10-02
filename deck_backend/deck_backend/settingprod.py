@@ -18,6 +18,7 @@ ALLOWED_HOSTS = ['api.wey.com']
 
 WEBSITE_URL = 'http://api.wey.com'
 
+
 # Application definition
 
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

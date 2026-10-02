@@ -1,4 +1,3 @@
-.env
 env/
 wey_backend/*.pyc
 wey_backend/*/*.pyc
